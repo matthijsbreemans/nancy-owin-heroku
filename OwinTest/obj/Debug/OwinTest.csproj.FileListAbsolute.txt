@@ -14,3 +14,7 @@ c:\users\mat\documents\visual studio 2013\Projects\OwinTest\OwinTest\bin\Debug\O
 c:\users\mat\documents\visual studio 2013\Projects\OwinTest\OwinTest\obj\Debug\OwinTest.csprojResolveAssemblyReference.cache
 c:\users\mat\documents\visual studio 2013\Projects\OwinTest\OwinTest\obj\Debug\OwinTest.exe
 c:\users\mat\documents\visual studio 2013\Projects\OwinTest\OwinTest\obj\Debug\OwinTest.pdb
+c:\users\mat\documents\visual studio 2013\Projects\OwinTest\OwinTest\bin\Debug\Nancy.dll
+c:\users\mat\documents\visual studio 2013\Projects\OwinTest\OwinTest\bin\Debug\Nancy.Owin.dll
+c:\users\mat\documents\visual studio 2013\Projects\OwinTest\OwinTest\bin\Debug\Nancy.xml
+c:\users\mat\documents\visual studio 2013\Projects\OwinTest\OwinTest\bin\Debug\Nancy.Owin.xml

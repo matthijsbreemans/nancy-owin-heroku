@@ -12,7 +12,8 @@ namespace OwinTest
     {
         public void Configuration(IAppBuilder app)
         {
-        app.Run(Invoke);
+            app.UseNancy();
+            //app.Run(Invoke);
         }
 
         // Invoked once per request.
