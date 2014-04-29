@@ -1,1 +1,1 @@
-web: mono OwinTest.exe $PORT
+worker: mono OwinTest.exe $PORT
