@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Nancy;
 using Nancy.Owin;
 
-namespace OwinTest
+namespace OwinTest.Modules
 {
     public class HomeModule : NancyModule
     {
@@ -39,7 +39,7 @@ namespace OwinTest
                 if (env["owin.RequestQueryString"] != "")
                     uri += "?" + (string)env["owin.RequestQueryString"];
 
-                return string.Format("{0} {1}", requestMethod, uri);
+                return View["ViewTest", string.Format("{0} {1}", requestMethod, uri)];
             };
         }
     }
