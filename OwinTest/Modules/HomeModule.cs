@@ -33,11 +33,10 @@ namespace OwinTest.Modules
                 var owinVersion = (string)env["owin.Version"];
                 var cancellationToken = (CancellationToken)env["owin.CallCancelled"];
 
-                var uri = (string)env["owin.RequestScheme"] + "://" + requestHeaders["Host"].First() +
-                  (string)env["owin.RequestPathBase"] + (string)env["owin.RequestPath"];
+                var uri = (string)env["owin.RequestScheme"] + "://" + requestHeaders["Host"].First() + (string)env["owin.RequestPathBase"] + (string)env["owin.RequestPath"];
 
-                if (env["owin.RequestQueryString"] != "")
-                    uri += "?" + (string)env["owin.RequestQueryString"];
+                //if (env["owin.RequestQueryString"] != "")
+                //    uri += "?" + (string)env["owin.RequestQueryString"];
 
                 return View["ViewTest", string.Format("{0} {1}", requestMethod, uri)];
             };
