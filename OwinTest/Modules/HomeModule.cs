@@ -35,10 +35,7 @@ namespace OwinTest.Modules
 
                 var uri = (string)env["owin.RequestScheme"] + "://" + requestHeaders["Host"].First() + (string)env["owin.RequestPathBase"] + (string)env["owin.RequestPath"];
 
-                //if (env["owin.RequestQueryString"] != "")
-                //    uri += "?" + (string)env["owin.RequestQueryString"];
-                return string.Empty;
-                //return View["ViewTest", string.Format("{0} {1}", requestMethod, uri)];
+                return View["ViewTest", string.Format("{0} {1}", requestMethod, uri)];
             };
         }
     }
