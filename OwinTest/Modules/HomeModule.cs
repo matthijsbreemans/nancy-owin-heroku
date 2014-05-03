@@ -37,8 +37,8 @@ namespace OwinTest.Modules
 
                 //if (env["owin.RequestQueryString"] != "")
                 //    uri += "?" + (string)env["owin.RequestQueryString"];
-
-                return View["ViewTest", string.Format("{0} {1}", requestMethod, uri)];
+                return string.Empty;
+                //return View["ViewTest", string.Format("{0} {1}", requestMethod, uri)];
             };
         }
     }
