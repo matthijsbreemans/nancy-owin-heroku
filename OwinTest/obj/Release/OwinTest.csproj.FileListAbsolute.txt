@@ -22,3 +22,4 @@ C:\Users\Mat\documents\visual studio 2013\Projects\OwinTest\OwinTest\bin\Release
 C:\Users\Mat\documents\visual studio 2013\Projects\OwinTest\OwinTest\bin\Release\System.Web.Razor.Unofficial.pdb
 C:\Users\Mat\documents\visual studio 2013\Projects\OwinTest\OwinTest\obj\Release\OwinTest.exe
 C:\Users\Mat\documents\visual studio 2013\Projects\OwinTest\OwinTest\obj\Release\OwinTest.pdb
+C:\Users\Mat\documents\visual studio 2013\Projects\OwinTest\OwinTest\obj\Release\OwinTest.csprojResolveAssemblyReference.cache
