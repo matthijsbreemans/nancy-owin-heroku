@@ -95,11 +95,22 @@
     </PropertyGroup>
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
   </Target>
-  <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+<PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <CustomCommands>
+      <!-- Custom commands for Xamarin -->
+      <CustomCommands>
+        <Command type="AfterBuild" command="cp -f &quot;$(SolutionDir)/packages/Nancy.Viewengines.Razor.0.22.2/BuildProviders/Nancy.ViewEngines.Razor.BuildProviders.dll&quot; &quot;$(ProjectDir)/bin/&quot;" />
+        <Command type="AfterBuild" command="cp -f &quot;$(SolutionDir)/packages/Nancy.Viewengines.Razor.0.22.2/lib/Net40/Nancy.ViewEngines.Razor.dll&quot; &quot;$(ProjectDir)/bin/&quot;" />
+      </CustomCommands>
+    </CustomCommands>
   </PropertyGroup>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <PropertyGroup Condition=" '$(OS)' == 'Windows_NT' ">
+    <PostBuildEvent>
+if $(ConfigurationName) == Debug (
+xcopy /s /y /R "$(SolutionDir)packages\Nancy.Viewengines.Razor.0.22.2\BuildProviders\Nancy.ViewEngines.Razor.BuildProviders.dll" "$(ProjectDir)bin\"
+xcopy /s /y /R "$(SolutionDir)packages\Nancy.Viewengines.Razor.0.22.2\lib\Net40\Nancy.ViewEngines.Razor.dll" "$(ProjectDir)bin\"
+)</PostBuildEvent>
+  </PropertyGroup>  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
